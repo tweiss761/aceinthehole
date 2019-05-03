@@ -1,0 +1,84 @@
+/*
+File Name: mixins.less
+Date: 5/13/18
+Programmer: Tammy Weiss
+*/
+
+
+/* Parametric mixin for headings */
+
+.headingStyle(@paramColor: #000000; @paramSize: 1.7em) {
+    color: @paramColor; // this accepts a font color passed through as an argument
+    font-size: @paramSize; // this accepts a font size passed through as an argument
+    font-weight: bold; // this is static code... not everything has to be dynamic!
+    line-height: @paramSize; // this reuses the same font size as before to change line height
+    margin-top: @paramSize / 2;
+    margin-bottom: @paramSize / 2;
+    text-transform: uppercase;
+
+}
+.roundedCornerAndBackgroundColor(@paramRadius: 8px; @paramColor: #000000) {
+      -moz-border-radius: @paramRadius;
+      -webkit-border-radius: @paramRadius;
+             border-radius: @paramRadius;
+             background-color: @paramColor;
+}
+.dropShadow(@paramXaxis: -3px; @paramYaxis: 5px; @paramBlur: 3px; @paramColor: #000000) {
+    -moz-box-shadow: @paramXaxis @paramYaxis  @paramBlur @paramColor;
+    -webkit-box-shadow: @paramXaxis @paramYaxis  @paramBlur @paramColor;
+           box-shadow: @paramXaxis @paramYaxis @paramBlur @paramColor;
+
+}
+ 
+.gradient(@paramDegree: 180deg; @paramFirstColor: #EBEAA9; @paramEndColor: #EBC588) {
+    -moz-background: linear-gradient(@paramDegree,@paramFirstColor,@paramEndColor);
+    -ms-background: linear-gradient(@paramDegree,@paramFirstColor,@paramEndColor);  
+    -webkit-background: linear-gradient(@paramDegree,@paramFirstColor,@paramEndColor);
+    -o-background: linear-gradient(@paramDegree,@paramFirstColor,@paramEndColor);
+      background: linear-gradient(@paramDegree,@paramFirstColor,@paramEndColor);
+}
+
+/* End parametric mixin for headings */
+
+
+
+
+// out: null
+.expand() {
+   transform: scale(1.1);
+   display: inline-block;
+}
+.transparent() {
+    opacity: .50;
+}
+.underitalic() {
+    text-decoration: underline;
+    font-style: italic;
+}
+.upperbold() {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.imageflip() {
+    -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+.shadow() {
+    text-shadow: 1px 1px;
+}
+.filter() {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.border() {
+  border-radius: 5px;
+}
+
+.lower(){
+    text-transform: lowercase;
+}
