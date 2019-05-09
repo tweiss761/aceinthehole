@@ -1,326 +1,394 @@
-        /*
+/*
 File Name: style.less
 Date: 4/30/18
 Programmer: Tammy Weiss
 */
-        
-        @import 'palette.less';
-        @import 'mixins.less';
-        /*Mobile Stylesheet*/
-        
-        body {
-            font-family: "Open Sans", sans-serif;
-            font-size: 16px;
-            line-height: 1.5em;
-            background-color: @color2;
-            color: @color3;
-        }
-        
-        a {
-            &:link {
-                color: @darkColor3;
-            }
-            &:visited {
-                color: @darkColor3;
-            }
-        }
-        
-        header {
-            padding-top: 2em;
-			background-color: @color2;
-            color: @color3;
-            h1 {
-                text-align: center;
-                .headingStyle();
-            }
-        }
-        
-        nav {
-            padding-top: 2em;
-            background-color: @color2;
-            color: @color3;
-            /* this is to hide the hamburger nav */
-			#navBar {
-				display: none;
-				width: 100%;
-			}
-			a {
-                padding: 7px 22px;
-                .roundedCornerAndBackgroundColor();
-                .dropShadow();
-                text-align: center;
-                text-decoration: none;
-                &:link {
-                    color: @color1;
-                }
-                &:visited {
-                    color: @color2;
-                }
-            }
-            ul {
-                list-style: none;
-            }
-            li {
-                padding-left: 100px;
-                margin-bottom: 25px;
-            }
 
+@import 'palette.less';
+@import 'mixins.less';
+
+/*Mobile Stylesheet*/
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    background-color: @color2;
+    color: @color3;
 }
-        
-        footer {
-            
-            h2 {
-                .headingStyle(@darkColor3;
-                1.4em)
-            }
+
+a {
+    &:link {
+        color: @darkColor3;
+    }
+    &:visited {
+        color: @darkColor3;
+    }
+}
+
+header {
+    padding-top: 2em;
+    background-color: @color2;
+    color: @color3;
+    h1 {
+        text-align: center;
+        .headingStyle();
+    }
+}
+
+footer h2 {
+    .headingStyle(@darkColor3);
+    size: 1.4em;
+    color: @color3;
+}
+
+footer a {
+    &:link {
+        color: @color3;
+    }
+    &:visited {
+        color: @color3;
+    }
+}
+
+footer p {
+    font-size: 16px;
+}
+
+em {
+    font-style: italic;
+}
+
+ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+main,
+header,
+footer {
+    padding: 1em;
+}
+
+h1 {
+    .headingStyle(@color1;
+    1.9em)
+}
+
+h2 {
+    .headingStyle(@color3;
+    1.4em)
+}
+
+p {
+    padding-top: 1em;
+}
+
+.hamburger {
+    background: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 45px;
+    color: @color1;
+    border: 0;
+    font-size: 1.4em;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    z-index: 10;
+    padding: 5px 15px 0;
+}
+
+.cross {
+    background: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: @color1;
+    border: 0;
+    font-size: 3em;
+    line-height: 65px;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    z-index: 10;
+    padding: 7px 15px 0;
+}
+
+.menu {
+    z-index: 10;
+    font-weight: 700;
+    width: 50%;
+    background: @color5;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    text-align: center;
+    font-size: 12px;
+}
+
+.menu ul {
+    list-style-type: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: block;
+    border-bottom: @color4 1px solid;
+    padding: 15px 0;
+}
+
+.menu li:hover {
+    display: block;
+    background: @color4;
+    border-bottom: @color4 1px solid;
+    padding: 15px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: @color3;
+    margin: 0;
+}
+
+.menu ul li a:hover {
+    color: @color4;
+    text-decoration: none;
+}
+
+.goawayDesktop {
+    display: inline;
+}
+
+.deskmenu {
+    display: none
+}
+
+
+/*STYLING FOR TABLET IN PORTRAIT*/
+
+@media only screen and (min-width: 481px) {
+    header, main, footer {
+        padding: 2em;
+    }
+    body {
+        font-size: 20px;
+        line-height: 1.75em;
+        background-color: @color2;
+        color: @color3;
+    }
+    a {
+        &:link {
             color: @color3;
         }
-        
-        a {
-            &:link {
-                color: @color3;
-            }
-            &:visited {
-                color: @color3;
-            }
+        &:visited {
+            color: @color3;
         }
-        
-        em {
-            font-style: italic;
-        }
-        
-        ul {
-            list-style-type: disc;
-            list-style-position: inside;
-            padding-left: 1em;
-            text-indent: -1em;
-        }
-        
-        main,
-        header,
-        footer,
-        {
-            padding: 1em;
-        }
-        
+    }
+    header {
+        background-color: @color2;
+        color: @color3;
         h1 {
-            .headingStyle(@color3;
-            1.8em)
+            text-align: center;
         }
-        
+    }
+    footer {
+        color: @color2;
         h2 {
             .headingStyle(@color3;
             1.4em)
         }
+        footer a {
+            &:link {
+                color: @color3;
+            }
+            &:visited {
+                color: @color3;
+            }
+        }
         
-        p {
-            padding-top: 1em;
         }
+    footer p {
+    font-size: 16px;
+}
 
 
-        .hamburger {
-            background:none;
-            position:absolute;
-            top:0;
-            right:0;
-            line-height:45px;
-            color:#999;
-            border:0;
-            font-size:1.4em;
-            font-weight:700;
-            cursor:pointer;
-            outline:none;
-            z-index:10;
-            padding:5px 15px 0;
+.goawayDesktop {
+    display: none;
+}
+
+.menu {
+    z-index: 10;
+    font-weight: 700;
+    width: 50%;
+    background: @color4;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    text-align: center;
+    font-size: 10px;
+}
+
+.menu ul {
+    list-style-type: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: block;
+    border-bottom: @color4 1px none;
+    padding: 15px 0;
+}
+
+.menu li:hover {
+    display: inline;
+    background: @color5;
+    border-bottom: @color3 1px solid;
+    padding: 15px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: @color3;
+    margin: 0;
+}
+
+.menu ul li a:hover {
+    color: @color5;
+    text-decoration: none;
+}
+
+.deskmenu {
+    display: inline;
+}
+
+.deskmenu a {
+    padding: 7px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.deskmenu ul {
+    list-style: none;
+}
+
+.deskmenu li {
+    padding-right: .1em;
+    text-align: center;
+    margin-bottom: 15px;
+    display: inline;
+}
+
+.deskmenu li:last-of-type {
+    padding-right: 0;
+}
+
+.deskmenu ul li a {
+    padding: 2.5em;
+}
+
+.image {
+    display: block;
+    margin: 0 auto;
+}
+
+
+}
+
+/*Desktop Stylesheet*/
+@media only screen and (min-width: 1025px) {
+    body {
+        background-color: @color2;
+        color: @color3;
+        font-size: 20px;
+    }
+    
+    a {
+        &:link {
+            color: @color5;
         }
-
-        .cross {
-            background:none;
-            position:absolute;
-            top:0;
-            right:0;
-            color:#999;
-            border:0;
-            font-size:3em;
-            line-height:65px;
-            font-weight:700;
-            cursor:pointer;
-            outline:none;
-            z-index:10;
-            padding:7px 15px 0;
+        &:visited {
+            color: @color1;
         }
-
-        .menu {
-            z-index:10;
-            font-weight:700;
-            width:50%;
-            background:#f1f1f1;
-            position:absolute;
-            top:50px;
-            right:0;
-            text-align:center;
-            font-size:12px;
+    }
+    
+    header {
+        background-color: @color2;
+        color: @color1;
+    }
+    
+    h1 {
+        color: @color1;
+        .upperbold;
+    }
+    
+    footer {
+        color: @color3;
+        h2 {
+            .headingStyle(@color3;
+            1.4em)
         }
-
-        .menu ul {
-            list-style-type:none;
-            list-style-image:none;
-            margin:0;
-            padding:0;
-        }
-
-        .menu li {
-            display:block;
-            border-bottom:#ddd 1px solid;
-            padding:15px 0;
-        }
-
-        .menu li:hover {
-            display:block;
-            background:#fff;
-            border-bottom:#ddd 1px solid;
-            padding:15px 0;
-        }
-
-        .menu ul li a {
-            text-decoration:none;
-            color:#666;
-            margin:0;
-        }
-
-        .menu ul li a:hover {
-            color:#666;
-            text-decoration:none;
-        }
-
-
-
-
-
-
-
-
-
-        /*STYLING FOR TABLET IN PORTRAIT*/
-        
-        @media only screen and (min-width: 481px) {
-            header, main, footer {
-                padding: 2em;
-            }
-            body {
-                font-size: 20px;
-                line-height: 1.75em;
-                background-color: @color2;
-                color: @color3;
-            }
-            a {
-                &:link {
-                    color: @color3;
-                }
-                &:visited {
-                    color: @color3;
-                }
-            }
-            header {
-                background-color: @color2;
-                color: @color3;
-                h1 {
-                    text-align: center;
-                }
-            }
-            nav {
-                background-color: @color2;
-                color: @color3;
-                a {
-                    &:link {
-                        color: @color1;
-                    }
-                    &:visited {
-                        color: @color1;
-                    }
-                }
-                ul li a {
-                    float: left;
-                    padding: 5px 29px 5px;
-                    margin-right: 1em;
-                    font-size: 1.2em;
-                }
-            }
-            footer {
-                color: @color2;
-                h2 {
-                    .headingStyle(@color3;
-                    1.4em)
-                }
-                a {
-                    &:link {
-                        color: @color3;
-                    }
-                    &:visited {
-                        color: @color3;
-                    }
-                }
-            }
-        }
-        /*Desktop Stylesheet*/
-        
-        @media only screen and (min-width: 1025px) {
-            body {
-                background-color: @color2;
-                color: @color3;
-                font-size: 20px;
-            }
-            a {
-                &:link {
-                    color: @color3;
-                }
-                &:visited {
-                    color: @color3;
-                }
-            }
-            header {
-                background-color: @color2;
+        a {
+            &:link {
                 color: @color1;
             }
-            h1 {
-                color: @color3;
-                .upperbold;
-            }
-            nav {
-                background-color: @color1;
-                color: @color3;
-                a {
-                    &:link {
-                        color: @color1;
-                    }
-                    &:visited {
-                        color: @color3;
-                    }
-                    &:hover {
-                        .expand;
-                        .lower;
-                    }
-                }
-            }
-            nav ul li a {
-                float: left;
-                padding: 5px 29px 5px;
-                margin-right: 1em;
-                font-size: 1.2em;
-            }
-            footer {
-                color: @color3;
-                h2 {
-                    .headingStyle(@color3;
-                    1.4em)
-                }
-                a {
-                    &:link {
-                        color: @color1;
-                    }
-                    &:visited {
-                        color: @color1;
-                    }
-                }
+            &:visited {
+                color: @color1;
             }
         }
+    }
+    
+    .goawayDesktop {
+        display: none;
+    }
+    
+    .menu {
+        z-index: 10;
+        font-weight: 700;
+        width: 100%;
+        background: @color2;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        text-align: center;
+        font-size: 12px;
+    }
+    
+    .menu ul {
+        list-style-type: none;
+        list-style-image: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .menu li {
+        display: inline;
+        border-bottom: @color3 1px solid;
+        padding: 15px 0;
+    }
+    
+    .menu li:hover {
+        display: inline;
+        background: @color5;
+        border-bottom: @color3 1px solid;
+        padding: 15px 0;
+    }
+    
+    .menu ul li a {
+        text-decoration: none;
+        color: #000000;
+        margin: 0;
+    }
+    
+    .menu ul li a:hover {
+        color: @color3;
+        text-decoration: none;
+    }
+}

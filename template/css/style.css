@@ -46,58 +46,24 @@ header h1 {
   margin-bottom: 0.85em;
   text-transform: uppercase;
 }
-nav {
-  padding-top: 2em;
-  background-color: #ffffff;
-  color: #000000;
-  /* this is to hide the hamburger nav */
-}
-nav #navBar {
-  display: none;
-  width: 100%;
-}
-nav a {
-  padding: 7px 22px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  border-radius: 8px;
-  background-color: #000000;
-  -moz-box-shadow: -3px 5px 3px #000000;
-  -webkit-box-shadow: -3px 5px 3px #000000;
-  box-shadow: -3px 5px 3px #000000;
-  text-align: center;
-  text-decoration: none;
-}
-nav a:link {
-  color: #ff0000;
-}
-nav a:visited {
-  color: #ffffff;
-}
-nav ul {
-  list-style: none;
-}
-nav li {
-  padding-left: 100px;
-  margin-bottom: 25px;
-}
-footer {
-  color: #000000;
-}
 footer h2 {
-  color: #000000;
-  font-size: 1.4em;
+  font-size: 1.7em;
   font-weight: bold;
-  line-height: 1.4em;
-  margin-top: 0.7em;
-  margin-bottom: 0.7em;
+  line-height: 1.7em;
+  margin-top: 0.85em;
+  margin-bottom: 0.85em;
   text-transform: uppercase;
-}
-a:link {
+  size: 1.4em;
   color: #000000;
 }
-a:visited {
+footer a:link {
   color: #000000;
+}
+footer a:visited {
+  color: #000000;
+}
+footer p {
+  font-size: 16px;
 }
 em {
   font-style: italic;
@@ -114,12 +80,12 @@ footer {
   padding: 1em;
 }
 h1 {
-  color: #000000;
-  font-size: 1.8em;
+  color: #ff0000;
+  font-size: 1.9em;
   font-weight: bold;
-  line-height: 1.8em;
-  margin-top: 0.9em;
-  margin-bottom: 0.9em;
+  line-height: 1.9em;
+  margin-top: 0.95em;
+  margin-bottom: 0.95em;
   text-transform: uppercase;
 }
 h2 {
@@ -140,7 +106,7 @@ p {
   top: 0;
   right: 0;
   line-height: 45px;
-  color: #999;
+  color: #ff0000;
   border: 0;
   font-size: 1.4em;
   font-weight: 700;
@@ -154,7 +120,7 @@ p {
   position: absolute;
   top: 0;
   right: 0;
-  color: #999;
+  color: #ff0000;
   border: 0;
   font-size: 3em;
   line-height: 65px;
@@ -168,7 +134,7 @@ p {
   z-index: 10;
   font-weight: 700;
   width: 50%;
-  background: #f1f1f1;
+  background: #40e0d0;
   position: absolute;
   top: 50px;
   right: 0;
@@ -183,23 +149,29 @@ p {
 }
 .menu li {
   display: block;
-  border-bottom: #ddd 1px solid;
+  border-bottom: #808080 1px solid;
   padding: 15px 0;
 }
 .menu li:hover {
   display: block;
-  background: #fff;
-  border-bottom: #ddd 1px solid;
+  background: #808080;
+  border-bottom: #808080 1px solid;
   padding: 15px 0;
 }
 .menu ul li a {
   text-decoration: none;
-  color: #666;
+  color: #000000;
   margin: 0;
 }
 .menu ul li a:hover {
-  color: #666;
+  color: #808080;
   text-decoration: none;
+}
+.goawayDesktop {
+  display: inline;
+}
+.deskmenu {
+  display: none;
 }
 /*STYLING FOR TABLET IN PORTRAIT*/
 @media only screen and (min-width: 481px) {
@@ -227,22 +199,6 @@ p {
   header h1 {
     text-align: center;
   }
-  nav {
-    background-color: #ffffff;
-    color: #000000;
-  }
-  nav a:link {
-    color: #ff0000;
-  }
-  nav a:visited {
-    color: #ff0000;
-  }
-  nav ul li a {
-    float: left;
-    padding: 5px 29px 5px;
-    margin-right: 1em;
-    font-size: 1.2em;
-  }
   footer {
     color: #ffffff;
   }
@@ -255,11 +211,81 @@ p {
     margin-bottom: 0.7em;
     text-transform: uppercase;
   }
-  footer a:link {
+  footer footer a:link {
     color: #000000;
   }
-  footer a:visited {
+  footer footer a:visited {
     color: #000000;
+  }
+  footer p {
+    font-size: 16px;
+  }
+  .goawayDesktop {
+    display: none;
+  }
+  .menu {
+    z-index: 10;
+    font-weight: 700;
+    width: 50%;
+    background: #808080;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    text-align: center;
+    font-size: 10px;
+  }
+  .menu ul {
+    list-style-type: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+  }
+  .menu li {
+    display: block;
+    border-bottom: #808080 1px none;
+    padding: 15px 0;
+  }
+  .menu li:hover {
+    display: inline;
+    background: #40e0d0;
+    border-bottom: #000000 1px solid;
+    padding: 15px 0;
+  }
+  .menu ul li a {
+    text-decoration: none;
+    color: #000000;
+    margin: 0;
+  }
+  .menu ul li a:hover {
+    color: #40e0d0;
+    text-decoration: none;
+  }
+  .deskmenu {
+    display: inline;
+  }
+  .deskmenu a {
+    padding: 7px 15px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .deskmenu ul {
+    list-style: none;
+  }
+  .deskmenu li {
+    padding-right: .1em;
+    text-align: center;
+    margin-bottom: 15px;
+    display: inline;
+  }
+  .deskmenu li:last-of-type {
+    padding-right: 0;
+  }
+  .deskmenu ul li a {
+    padding: 2.5em;
+  }
+  .image {
+    display: block;
+    margin: 0 auto;
   }
 }
 /*Desktop Stylesheet*/
@@ -270,40 +296,19 @@ p {
     font-size: 20px;
   }
   a:link {
-    color: #000000;
+    color: #40e0d0;
   }
   a:visited {
-    color: #000000;
+    color: #ff0000;
   }
   header {
     background-color: #ffffff;
     color: #ff0000;
   }
   h1 {
-    color: #000000;
+    color: #ff0000;
     font-weight: bold;
     text-transform: uppercase;
-  }
-  nav {
-    background-color: #ff0000;
-    color: #000000;
-  }
-  nav a:link {
-    color: #ff0000;
-  }
-  nav a:visited {
-    color: #000000;
-  }
-  nav a:hover {
-    transform: scale(1.1);
-    display: inline-block;
-    text-transform: lowercase;
-  }
-  nav ul li a {
-    float: left;
-    padding: 5px 29px 5px;
-    margin-right: 1em;
-    font-size: 1.2em;
   }
   footer {
     color: #000000;
@@ -322,5 +327,45 @@ p {
   }
   footer a:visited {
     color: #ff0000;
+  }
+  .goawayDesktop {
+    display: none;
+  }
+  .menu {
+    z-index: 10;
+    font-weight: 700;
+    width: 100%;
+    background: #ffffff;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    text-align: center;
+    font-size: 12px;
+  }
+  .menu ul {
+    list-style-type: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+  }
+  .menu li {
+    display: inline;
+    border-bottom: #000000 1px solid;
+    padding: 15px 0;
+  }
+  .menu li:hover {
+    display: inline;
+    background: #40e0d0;
+    border-bottom: #000000 1px solid;
+    padding: 15px 0;
+  }
+  .menu ul li a {
+    text-decoration: none;
+    color: #000000;
+    margin: 0;
+  }
+  .menu ul li a:hover {
+    color: #000000;
+    text-decoration: none;
   }
 }
