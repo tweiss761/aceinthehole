@@ -12,32 +12,22 @@ Date: 4/30/18
 Programmer: Tammy Weiss
 */
 
-/*function myFunction() {
-  var x = document.getElementById("navBar");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }*/
+$(document).ready(function() {
 
-$(".hamburger").on("click", function() {
+    $(".cross").hide();
+    $(".menu").hide();
+    $(".hamburger").show();
 
-  $(".menu").slideToggle("slow");
+    $(".hamburger").on("click", function () {
+        $(".menu").slideToggle("slow");
+        $(".hamburger").hide();
+        $(".cross").show();
+    });
 
-  $(".hamburger").hide();
-
-  $(".cross").show();
-
-});
-
-$(".cross").on("click", function() {
-
-  $(".menu").slideToggle("slow");
-
-  $(".cross").hide();
-
-  $(".hamburger").show();
-
-});
+    $(".cross").on("click", function () {
+        $(".menu").slideToggle("slow");
+        $(".cross").hide();
+        $(".hamburger").show();
+    });
 
 });
