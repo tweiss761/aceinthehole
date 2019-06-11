@@ -100,6 +100,17 @@ h2 {
 p {
   padding-top: 1em;
 }
+
+registration {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+}
+form {
+	margin: auto;
+    display: table;
+}
+
+
 .hamburger {
   background: none;
   position: absolute;
@@ -172,6 +183,14 @@ p {
 }
 .deskmenu {
   display: none;
+}
+#honeypot {
+  display: none;
+}
+#slideshow {
+  margin: 50px auto;
+  position: relative;
+
 }
 /*STYLING FOR TABLET IN PORTRAIT*/
 @media only screen and (min-width: 481px) {
@@ -286,6 +305,9 @@ p {
   .image {
     display: block;
     margin: 0 auto;
+  }
+  #honeypot {
+    display: none;
   }
 }
 /*Desktop Stylesheet*/
